@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <title>Курс валют</title>
+</head>
+<body>
+    <div class="par">
+        <form id="valet">
+            <label for="rub">Введите число в рублях:</label>
+            <input name="rub" id="rub"></input>
+            <button type="button" name="button1" id="button1">Расчет</button>
+            <label for="rub"></label>
+            <label for="dollar">Доллары</label>
+            <output name="dollar" id="dollarOutput"></output>
+            <label for="euro">Евро</label>
+            <output name="euro" id="euroOutput"></output>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("valet");
+    var rubInput = document.getElementById("rub");
+    var dollarOutput = document.getElementById("dollarOutput");
+    var euroOutput = document.getElementById("euroOutput");
+    
+    document.getElementById("button1").addEventListener("click", function() {
+        var rubAmount = parseFloat(rubInput.value);
+        
+        if(!isNaN(rubAmount)) {
+            var dollarAmount = rubAmount / 93;
+            var euroAmount = rubAmount / 98;
+            
+            dollarOutput.textContent = dollarAmount.toFixed(2);
+            euroOutput.textContent = euroAmount.toFixed(2);
+        } else {
+            alert("Пожалуйста, введите число в поле 'Рублей'");
+        }
+    });
+});
+    </script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(function(error) {
+                console.log('Service Worker registration failed:', error);
+            });
+        });
+    }
+</script>
+
+
+</body>
+</html>
