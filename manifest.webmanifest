@@ -1,0 +1,20 @@
+{
+    "name": "Currency Converter",
+    "short_name": "Entropy",
+    "start_url": "/",
+    "description": "Конвертер валют.",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "orientation": "portrait",
+    "theme_color": "#001696",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512"
+        }
+    ]
+}
