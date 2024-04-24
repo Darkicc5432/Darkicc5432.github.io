@@ -2,8 +2,7 @@ const cache_name = "currency-converter-cache";
 
 const resources = [
   '/',
-  '/style.css',
-  'service-reg.js'
+  '/style.css'
 ];
 
 self.addEventListener('install', event => {
