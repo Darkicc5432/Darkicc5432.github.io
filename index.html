@@ -11,29 +11,6 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-messaging.js"></script>
-    <script>
-        const firebaseConfig = {
-        apiKey: "AIzaSyAHZq4qhOqAL_Bv9s14Ucu3XgiafdGiWnw",
-        authDomain: "pwa-kod.firebaseapp.com",
-        projectId: "pwa-kod",
-        storageBucket: "pwa-kod.appspot.com",
-        messagingSenderId: "633133019616",
-        appId: "1:633133019616:web:f19dd74669d803083abb85",
-        measurementId: "G-CLJR42XRWN"
-        };
-
-        firebase.initializeApp(firebaseConfig);
-        const messaging = firebase.messaging();
-
-        // Запрос разрешения на отправку уведомлений
-        messaging.requestPermission()
-        .then(() => {
-            console.log("Разрешение на отправку уведомлений получено");
-        })
-        .catch((error) => {
-            console.error("Ошибка при запросе разрешения на отправку уведомлений:", error);
-        });
-    </script>
 
     <div class="par">
         <form id="valet">
@@ -92,6 +69,29 @@
         }
     </script>
 
+    <script>
+        const firebaseConfig = {
+        apiKey: "AIzaSyAHZq4qhOqAL_Bv9s14Ucu3XgiafdGiWnw",
+        authDomain: "pwa-kod.firebaseapp.com",
+        projectId: "pwa-kod",
+        storageBucket: "pwa-kod.appspot.com",
+        messagingSenderId: "633133019616",
+        appId: "1:633133019616:web:f19dd74669d803083abb85",
+        measurementId: "G-CLJR42XRWN"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const messaging = firebase.messaging();
+
+        // Запрос разрешения на отправку уведомлений
+        messaging.requestPermission()
+        .then(() => {
+            console.log("Разрешение на отправку уведомлений получено");
+        })
+        .catch((error) => {
+            console.error("Ошибка при запросе разрешения на отправку уведомлений:", error);
+        });
+    </script>
 
 </body>
 </html>
