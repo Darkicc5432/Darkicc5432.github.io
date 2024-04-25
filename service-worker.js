@@ -1,7 +1,6 @@
 const cache_name = "currency-converter-cache";
 
 const resources = [
-  '/',
   '/style.css'
 ];
 
