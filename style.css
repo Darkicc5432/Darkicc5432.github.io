@@ -40,7 +40,7 @@ body {
   margin-bottom: 20px;
 }
 
-#button1 {
+#button1, #subscribe_to_notification {
   font-size: 20px;
   font-weight: bold;
   padding: 10px 10px;

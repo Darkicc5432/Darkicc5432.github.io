@@ -24,6 +24,11 @@
             <output name="euro" id="euroOutput"></output>
         </form>
     </div>
+
+    <div class="par">
+        <button type="button" id="subscribe_to_notification">Подписаться на уведомления</button>
+    </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById("valet");
@@ -90,6 +95,14 @@
         })
         .catch((error) => {
             console.error("Ошибка при запросе разрешения на отправку уведомлений:", error);
+        });
+
+        document.getElementById("subscribe_to_notification").addEventListener("click",async ()=>{
+            await fetch('https://script.google.com/macros/s/AKfycbwAYR3CUzT7TMrroAXVIzqhq5nxPbwnplisEsH4oj5piIy_VH1gqd0t8EqHM1PerU1ZMQ/exec', {
+                'method': 'post',
+                'mode': 'no-cors',
+                'body': JSON.stringify({'token': await messaging.getToken()})
+            });
         });
     </script>
 
