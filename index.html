@@ -27,14 +27,19 @@
 
     <div class="par">
         <button type="button" id="subscribe_to_notification">Подписаться на уведомления</button>
+
+        <label for="text">Содержание уведомления</label>
+        <input name="text" id="text"></input>
+
+        <button type="button" id="send_test_notification">Отправить тестовое уведомление</button>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    var form = document.getElementById("valet");
-    var rubInput = document.getElementById("rub");
-    var dollarOutput = document.getElementById("dollarOutput");
-    var euroOutput = document.getElementById("euroOutput");
+        var form = document.getElementById("valet");
+        var rubInput = document.getElementById("rub");
+        var dollarOutput = document.getElementById("dollarOutput");
+        var euroOutput = document.getElementById("euroOutput");
     
     document.getElementById("button1").addEventListener("click", function() {
         var rubAmount = parseFloat(rubInput.value);
@@ -106,5 +111,6 @@
         });
     </script>
 
+    <script src="send-notification.js"></script>
 </body>
 </html>

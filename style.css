@@ -7,6 +7,9 @@ body {
 }
 
 .par {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 300px;
   margin: 70px auto;
   background-color: #fff;
@@ -24,14 +27,14 @@ body {
   margin-top: 10px;
 }
 
-#valet label {
+#valet label, .par label {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 #valet input,
-#valet output {
+#valet output, #text {
   margin-top: 10px;
   font-size: 16px;
   padding: 10px;
@@ -40,7 +43,11 @@ body {
   margin-bottom: 20px;
 }
 
-#button1, #subscribe_to_notification {
+#text{
+  width: 90%;
+}
+
+#button1, #subscribe_to_notification, #send_test_notification {
   font-size: 20px;
   font-weight: bold;
   padding: 10px 10px;
