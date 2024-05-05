@@ -1,16 +1,3 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyAHZq4qhOqAL_Bv9s14Ucu3XgiafdGiWnw",
-    authDomain: "pwa-kod.firebaseapp.com",
-    projectId: "pwa-kod",
-    storageBucket: "pwa-kod.appspot.com",
-    messagingSenderId: "633133019616",
-    appId: "1:633133019616:web:f19dd74669d803083abb85",
-    measurementId: "G-CLJR42XRWN"
-};
-
-firebase.initializeApp(firebaseConfig);
-const messaging = firebase.messaging();
-
 document.getElementById("send_test_notification").addEventListener("click", async (event)=>{
     const tokens = (await (await fetch('https://script.google.com/macros/s/AKfycbwAYR3CUzT7TMrroAXVIzqhq5nxPbwnplisEsH4oj5piIy_VH1gqd0t8EqHM1PerU1ZMQ/exec')).json()).tokens
 
